@@ -11,7 +11,6 @@ router.use("/users", restricted, usersRouter);
 router.get("/hash", (req, res) => {
   
   const authentication = req.headers.authentication;
-
  
   const hash = bcrypt.hashSync(authentication, 8);
 
